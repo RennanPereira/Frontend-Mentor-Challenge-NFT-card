@@ -42,7 +42,7 @@ i need to focus more on css, there is a lot of things that i do not know how to 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Add your name here](https://github.com/RennanPereira)
+- Frontend Mentor - [@RennanPereira](https://www.frontendmentor.io/profile/RennanPereirahttps://github.com/RennanPereira)
 
 
