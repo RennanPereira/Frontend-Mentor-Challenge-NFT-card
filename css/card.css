@@ -1,132 +1,164 @@
-body {
-    background-color:hsl(217, 54%, 11%);
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Outfit', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  --bg-color:hsl(217, 54%, 11%);
+  --price-and-hover-color: #00fff8;
+  --details: hsl(215, 51%, 70%);
+  --border-color: hsl(215, 32%, 27%);
+  --text-color: hsl(0, 0%, 100%);
+  --card-color: hsl(216, 50%, 16%);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Outfit', sans-serif;
+  margin-top: 20px;
 }
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 330px;
+  margin-inline: auto;
 }
 
 .card {
-    margin-top: -23px;
-    width: 330px;
-    background-color: hsl(216, 50%, 16%);
-    border-radius: 15px;
+  position: relative;
+  bottom: 22px;
+  background-color: var(--card-color);
+  border-radius: 15px;
+  width: 100%;
+  padding-inline: 8%;
+}
+
+.card .card-top {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
 }
 
 .card .card-top img {
-    max-width: 280px;
-    margin: 25px;
-    border-radius: 8px;
-    cursor: pointer;
-  
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .card .card-top img:hover {
-    color:#00fff8;
+  color:var(--price-and-hover-color);
 }
 
 .card .name {
-    font-size: 21px;
-    margin-top: -12px;
-    color:hsl(0, 0%, 100%);
-    padding-left: 25px;
-    font-weight: 600;
-    cursor: pointer;
+  font-size: 21px;
+  color:var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .card .name:hover {
-    color:#00fff8;
-
+  color:var(--price-and-hover-color);
 }
 
 .card .details {
-    padding: 25px;
-    margin-top: -10px;
-    color: hsl(215, 51%, 70%);
-    font-size: 16px;
-
+  color:var(--details);
+  font-size: 16px;
+  margin-block: 15px;
 }
 
 .card .info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    margin-left: 25px;
-    margin-right: 30px;
-    border-bottom: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding-block: 15px;
 }
 
 .card .info .price {
-    display: flex;
-    
+  display: flex;
+  align-items: center;
 }
 
 .card .info .price h2 {
-    color:#00fff8;
-    font-size: 15px;
+  color:var(--price-and-hover-color);
+  font-size: 15px;
 }
-.card .info .price img {
-    height: 18px;
+
+.card .info .price img,
+.card .info .timeLeft img {
+  height: 18px;
 }
 
 .card .info .timeLeft {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .card .info .timeLeft h3 {
-    color: hsl(215, 51%, 70%);
-    font-size: 15px;
-
-}
-
-.card .info .timeLeft img {
-    height: 18px;
+  color: var(--details);
+  font-size: 15px;
 }
 
 .card .creators-name {
-    color: hsl(215, 51%, 70%);
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-    padding-top: 10px;
-    margin-bottom: 30px;
-    font-size: 16px;
-
+  color: var(--details);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-block: 30px;
 }
 
 .card .creators-name img {
-    height: 30px;
-    border-radius: 20px;
-    border: 1.5px solid white;
-    margin-left: 25px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1.5px solid var(--text-color);
 }
 
 .card .creators-name h4 {
-    color:hsl(0, 0%, 100%);
-    cursor: pointer;
+  color:var(--text-color);
+  cursor: pointer;
 }
 
 .card .creators-name h4:hover {
-    color:#00fff8;
-
+  color: var(--price-and-hover-color);
 }
 
 .attribution {
-    font-size: 10px;
-    padding-top: 40px;
-    color: hsl(215, 51%, 70%);
-
+  font-size: 10px;
+  padding-top: 10px;
+  color: var(--details);
 }
 
 .attribution a {
-    color:hsl(0, 0%, 100%);
+  color:var(--text-color);
+}
 
+.overlay {
+  position:absolute;
+  top:0;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #00fff8;
+  border-radius: 8px;
+  height: 275px;
+  width: 277px;
+  margin: 25px;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.icon {
+  position: absolute;
+  font-size: 40px;
+  color: var(--text-color);
+  top: 39%;
+  left: 44%;
 }
