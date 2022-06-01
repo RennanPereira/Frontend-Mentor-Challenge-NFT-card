@@ -141,12 +141,12 @@ main {
 
 .overlay {
   position:absolute;
-  top:0;
+  top:-2px;
   opacity: 0;
   transition: .3s ease;
   background-color: #00fff8;
   border-radius: 8px;
-  height: 275px;
+  height: 276px;
   width: 277px;
   margin: 25px;
 }
