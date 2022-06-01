@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --bg-color:hsl(217, 54%, 11%);
+  --bg-color: hsl(217, 54%, 11%);
   --price-and-hover-color: #00fff8;
   --details: hsl(215, 51%, 70%);
   --border-color: hsl(215, 32%, 27%);
@@ -22,6 +22,7 @@ body {
 }
 
 main {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -52,23 +53,25 @@ main {
 }
 
 .card .card-top img:hover {
-  color:var(--price-and-hover-color);
+  color: var(--price-and-hover-color);
 }
 
 .card .name {
   font-size: 21px;
-  color:var(--text-color);
+  color: var(--text-color);
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
 }
 
+.card .creators-name h4:hover,
 .card .name:hover {
-  color:var(--price-and-hover-color);
+  color: var(--price-and-hover-color);
+  transition: 0.3s ease;
 }
 
 .card .details {
-  color:var(--details);
+  color: var(--details);
   font-size: 16px;
   margin-block: 15px;
 }
@@ -87,7 +90,7 @@ main {
 }
 
 .card .info .price h2 {
-  color:var(--price-and-hover-color);
+  color: var(--price-and-hover-color);
   font-size: 15px;
 }
 
@@ -121,12 +124,8 @@ main {
 }
 
 .card .creators-name h4 {
-  color:var(--text-color);
+  color: var(--text-color);
   cursor: pointer;
-}
-
-.card .creators-name h4:hover {
-  color: var(--price-and-hover-color);
 }
 
 .attribution {
@@ -136,15 +135,16 @@ main {
 }
 
 .attribution a {
-  color:var(--text-color);
+  color: var(--text-color);
 }
 
 .overlay {
-  position:absolute;
-  top:-2px;
+  position: absolute;
+  cursor: pointer;
+  top: -2px;
   opacity: 0;
-  transition: .3s ease;
-  background-color: #00fff8;
+  transition: 0.3s ease;
+  background-color: var(--price-and-hover-color);
   border-radius: 8px;
   height: 276px;
   width: 277px;
